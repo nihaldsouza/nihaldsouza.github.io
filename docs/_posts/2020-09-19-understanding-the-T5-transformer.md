@@ -46,7 +46,7 @@ Finally they talk about how to use **extra computation** to train these transfor
 
 ## Value of Pre-Training
 
-![value_of_pre_training](https://github.com/nihaldsouza/nihaldsouza.github.io/blob/master/docs/assets/T5%20transformer/value_of_pre_training.png)
+![value_of_pre_training]({{site.url}}/Blog/assets/t5-transformer/value_of_pre_training.png)
 
 The first table shows the advantage of pre-training compared to randomly initialized model that’s fine tuned on the supervised learning task at hand. You can see the difference in the GLUE benchmark, CNN/Daily Mail summarization task, the SQuAD question and answer dataset. But you also see that there aren’t any gains in the translation tasks (English to German, French and Romanian respectively). This is attributed to their large datasets that do not benefit from the pre-training and fine tuning pipeline.
 
