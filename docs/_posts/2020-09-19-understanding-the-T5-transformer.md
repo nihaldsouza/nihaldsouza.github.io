@@ -46,7 +46,7 @@ Finally they talk about how to use **extra computation** to train these transfor
 
 ## Value of Pre-Training
 
-![value_of_pre_training](/docs/assets/T5 transformer/value_of_pre_training.png)
+![value_of_pre_training](transformers/assets/T5 transformer/value_of_pre_training.png)
 
 The first table shows the advantage of pre-training compared to randomly initialized model that’s fine tuned on the supervised learning task at hand. You can see the difference in the GLUE benchmark, CNN/Daily Mail summarization task, the SQuAD question and answer dataset. But you also see that there aren’t any gains in the translation tasks (English to German, French and Romanian respectively). This is attributed to their large datasets that do not benefit from the pre-training and fine tuning pipeline.
 
@@ -54,13 +54,13 @@ The first table shows the advantage of pre-training compared to randomly initial
 
 Attention masking masking describes how much of the input the transformer is able to see when it’s producing the output.
 
-![attention_masking](/docs/assets/T5 transformer/attention_masking.png)
+![attention_masking](transformers/assets/T5 transformer/attention_masking.png)
 
 In the **fully-visible** setting, the transformer is able to see the entire input when its producing each token in the output. In the **Causal** setting, it sees token 1 as it is generating output 1 and the window slides over as it generates the sequence. **Causal with prefix** sees a portion of the initial sequence and then proceeds to behave like the Causal masking. 
 
 ## Corresponding Architectures
 
-![corresponding_architectures](/docs/assets/T5 transformer/corresponding_architectures.png)
+![corresponding_architectures](transformers/assets/T5 transformer/corresponding_architectures.png)
 
 The **Encoder-Decoder architecture** corresponds to the fully-visible masking, where the entire input is visible while generating the output sequence. 
 
@@ -72,7 +72,7 @@ The **Prefix LM architecture** is a mix of both the BERT-style and language mode
 
 Experiments showed that the Encoder-Decoder architecture obtained the best results. 
 
-![Arch_perf_eval](/docs/assets/T5 transformer/Arch_perf_eval.png)
+![Arch_perf_eval](transformers/assets/T5 transformer/Arch_perf_eval.png)
 
 This table differentiates the different architectures using the **denoising objective** where you’re randomly corrupting the tokens and only predicting the corrupted tokens. Whereas the **autoregressive objective** (LM) involves autoregressively predicting the next token, sliding the window and predicting the next token and so on to pre-train the models.
 
@@ -80,7 +80,7 @@ The first two architectures are the encoder-decoder with the difference being th
 
 ## Denoising Objective
 
-![denoising_objective](/docs/assets/T5 transformer/denoising_objective.png)
+![denoising_objective](transformers/assets/T5 transformer/denoising_objective.png)
 
 This table further explores the denoising self supervised objectives. The baseline is set without denoising using the **prefix language modeling** where you see an input ‘Thank you for inviting’ and predict the output target ‘me to your party last week’ by sliding over the window i.e.- you slide over the output token ‘me’ into the input while predicting ‘to’ and then slide over ‘to’ while predicting ‘your’ and so on. 
 
@@ -98,7 +98,7 @@ The **BERT-style model** uses mask style modeling where you mask out certain int
 
 They further compare the replace span and drop token strategy as a way of corrupting tokens in this mass language modelling task. 
 
-![span_corruption_strat](/docs/assets/T5 transformer/span_corruption_strat.png)
+![span_corruption_strat](transformers/assets/T5 transformer/span_corruption_strat.png)
 
 What they observe is that the replace span works well in some tasks whereas drop corrupted tokens works better on others. So it’s interesting to see the difference when you explicitly indicate the the location of the dropped token versus where you don’t indicate anything in the input regarding the spans of the tokens being dropped.
 
@@ -106,7 +106,7 @@ They also observed these **pre-training efficiency gains** from **smaller output
 
 ## Self-Supervised Learning
 
-![self_super_learn](/docs/assets/T5 transformer/self_super_learn.png)
+![self_super_learn](transformers/assets/T5 transformer/self_super_learn.png)
 
 Between the Language Modelling technique where we slide over the input tokens to predict the output, the deshuffling technique of randomly rearranging the input tokens, the BERT-Style model (a.ka. denoising objective) of masking a sequence of words from the sentence and training the model to predict these masked words, seemed to perform the best.
 
@@ -116,17 +116,17 @@ They also explored the hyper parameters of corruption rate and corrupted span le
 
 This is also seen in the following tables where the denoising objective performs the best under various tasks as compared to the other models. Comparing the corruption strategies also indicates how replacing spans works best in the majority of the tasks such as the SQuAD dataset, CNN/Daily Mail dataset and the SuperGLUE benchmark.
 
-![perf1](/docs/assets/T5 transformer/perf1.png)
+![perf1](transformers/assets/T5 transformer/perf1.png)
 
-![perf2](/docs/assets/T5 transformer/perf2.png)
+![perf2](transformers/assets/T5 transformer/perf2.png)
 
-![perf 3](/docs/assets/T5 transformer/perf 3.png)
+![perf 3](transformers/assets/T5 transformer/perf 3.png)
 
 ## Datasets
 
 The other factor of variation that this paper looks into is the dataset that is used in the pre-training self supervised learning objective. 
 
-![datasets](/docs/assets/T5 transformer/datasets.png)
+![datasets](transformers/assets/T5 transformer/datasets.png)
 
 They start off with the Colossal Clean Crawled Corpus (C4) which is obtained by scraping web pages and ignoring the markup from the HTML. However, Common Crawl contains large amounts of gibberish text like duplicate text, error messages and menus. Also, there is a great deal of useless text with respect to our tasks like offensive words, placeholder text, or source codes.
 
@@ -146,17 +146,17 @@ They also use the RealNews-like dataset which contains new articles. WebText-lik
 
 ## Dataset Size
 
-![dataset_size](/docs/assets/T5 transformer/dataset_size.png)
+![dataset_size](transformers/assets/T5 transformer/dataset_size.png)
 
 They also explore the dataset size by downsampling their C4 dataset into various subsets to show when overfitting happens with respect to the size of the down sampled dataset. They also indicate how many times these different subsets of the data involve repeating the same token as it is passed in mini batches for pre-training objective. 
 
-![dataset_size_2](/docs/assets/T5 transformer/dataset_size_2.png)
+![dataset_size_2](transformers/assets/T5 transformer/dataset_size_2.png)
 
 A dramatic overfitting happens for the 2²³ dataset and a similar trend with the other versions of the dataset, but no visible overfitting with the full dataset.
 
 ## Fine Tuning Strategy
 
-![fine_tuning_strat](/docs/assets/T5 transformer/fine_tuning_strat.png)
+![fine_tuning_strat](transformers/assets/T5 transformer/fine_tuning_strat.png)
 
 The authors study the strategy for fine tuning these models on down stream tasks such as question answering or natural language inference after they have been pre-trained on the BERT, replaced span self-supervised learning task on the C4 dataset. 
 
@@ -176,13 +176,13 @@ One of the really interesting characteristics of this text-to-text framework is 
 
 But they find that there is this issue of **task imbalance.** We know that there are these different tasks such as cola, sentiment analysis, etc. and along with that are different dataset sizes. We need different ways of balancing out the sampling the mini-batches with respect to pre-training the model if you’re going to try the multi-task training. It seems intuitively like this would obviously be better than only using the unlabelled data, they don’t really realize these gains quite yet.
 
-![task_imbalance](/docs/assets/T5 transformer/task_imbalance.png)
+![task_imbalance](transformers/assets/T5 transformer/task_imbalance.png)
 
 They find that the baseline study of pre-training on the unlabelled data and fine tuning into the label task works better than trying to integrate the supervised learning data in the pre-training objective. 
 
 The following table further shows the results of this study.
 
-![task_imb_2](/docs/assets/T5 transformer/task_imb_2.png)
+![task_imb_2](transformers/assets/T5 transformer/task_imb_2.png)
 
 The first strategy is of pre-training on the unsupervised data and then fine-tuning on the supervised learning. The second one — multitask training- is something we saw earlier where instead of doing fine-tuning, you’re only pre-training on the different tasks and thats just the final model that is going to be used for evaluation. The third one involves fine-tuning on the individual tasks. So you do multi-task learning on sentiment analysis, question-answering, etc. and then fine-tune it to the particular test its going to be evaluated on such as GLUE, CNNDM, etc. 
 
@@ -194,7 +194,7 @@ Supervised multi-task pre-training describes not using the unsupervised objectiv
 
 The next question the authors look at is how to use extra computation with pre-training these transformer language models. 
 
-![extra_computation](/docs/assets/T5 transformer/extra_computation.png)
+![extra_computation](transformers/assets/T5 transformer/extra_computation.png)
 
 They first explore by increasing the training steps and then increasing the batch size which doesn’t perform as well. They also try increasing the size of the model and doubling the training steps, increasing the size and keeping the same number of training steps. They also compare this with certain ensemble methods. 
 
@@ -202,7 +202,7 @@ Interestingly, they find that the four times in the size and not increasing the 
 
 But this is inline with a certain [recent study](https://arxiv.org/pdf/2002.11794.pdf) that suggest the best way of doing this is to train a large model and stop training early, and then heavily compress them all for the sake of efficiency.
 
-![extra_comp_2](/docs/assets/T5 transformer/extra_comp_2.png)
+![extra_comp_2](transformers/assets/T5 transformer/extra_comp_2.png)
 
 ​																						Source: [Train Large, Then Compress](https://arxiv.org/pdf/2002.11794.pdf)
 
@@ -212,7 +212,7 @@ But this is inline with a certain [recent study](https://arxiv.org/pdf/2002.1179
 
 Ensembling is an interesting technique technique that involves having the same model architectures, but you train each one with different original random parameters that result in different predictions from the model. You would then average out the predictions of the model. 
 
-![ensemble](/docs/assets/T5 transformer/ensemble.png)
+![ensemble](transformers/assets/T5 transformer/ensemble.png)
 
 There are other ways of ensembling like having a different architecture, different ordering of the batches or entirely different pre-training objectives. 
 
@@ -220,7 +220,7 @@ There are other ways of ensembling like having a different architecture, differe
 
 The authors then then take all the findings from this study —  the self supervised learning objective, the C4 dataset — and then scaling up the model size to 3 billion and 11 billion parameters. 
 
-![scaling up](/docs/assets/T5 transformer/scaling up.png)
+![scaling up](transformers/assets/T5 transformer/scaling up.png)
 
 You notice these major gains in the Stanford Question-Answer dataset compared to the base model (T5-Base).
 
@@ -228,13 +228,13 @@ You notice these major gains in the Stanford Question-Answer dataset compared to
 
 In the [Google AI blogpost](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html), the authors show the performance of the T5 model with 11 billion parameters on [this](https://t5-trivia.glitch.me/) trivia Q&A where it tries to answer all these different questions just from memory. 
 
-![applications](/docs/assets/T5 transformer/applications.gif)
+![applications](transformers/assets/T5 transformer/applications.gif)
 
 They also introduced this “*Fill-in-the-Blank Text Generation”* tool (available on the blog) where there is this sentence and you have to select the number of words to fill in. With each selection of N (number of words) there are different variations of a logical sentence being created. 
 
-![fib_n_1](/docs/assets/T5 transformer/fib_n_1.png)
+![fib_n_1](transformers/assets/T5 transformer/fib_n_1.png)
 
-![fib_n_2](/docs/assets/T5 transformer/fib_n_2.png)
+![fib_n_2](transformers/assets/T5 transformer/fib_n_2.png)
 
 ## Resources
 
