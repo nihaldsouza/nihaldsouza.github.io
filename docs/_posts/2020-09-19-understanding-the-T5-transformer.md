@@ -204,7 +204,7 @@ But this is inline with a certain [recent study](https://arxiv.org/pdf/2002.1179
 
 ![extra_comp_2](/assets/t5-transformer/extra_comp_2.png)
 
-​																						Source: [Train Large, Then Compress](https://arxiv.org/pdf/2002.11794.pdf)
+*Source: [Train Large, Then Compress](https://arxiv.org/pdf/2002.11794.pdf)*
 
 > Larger models are significantly more sample-efficient, such that optimally compute-efficient training involves training very large models on a relatively modest amount of data and stopping significantly before convergence. — ["Scaling Laws for Neural Language Models" abstract](https://arxiv.org/abs/2001.08361)
 
