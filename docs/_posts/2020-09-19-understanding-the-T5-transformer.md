@@ -22,7 +22,7 @@ The paper is a large-scale study on the different components of the pre-trained 
 
 An interesting detail about this study is the text-to-text formulation of all NLP tasks. One such being the ‘Cola test’ (where you’re trying to determine whether a sentence is grammatically correct) the BERT model may be fine tuned for this by having a classification output on the CLS token index of the output layer of the BERT model. 
 
-![img](https://1.bp.blogspot.com/-o4oiOExxq1s/Xk26XPC3haI/AAAAAAAAFU8/NBlvOWB84L0PTYy9TzZBaLf6fwPGJTR0QCLcBGAsYHQ/s640/image3.gif)
+![text-to-text framework](https://1.bp.blogspot.com/-o4oiOExxq1s/Xk26XPC3haI/AAAAAAAAFU8/NBlvOWB84L0PTYy9TzZBaLf6fwPGJTR0QCLcBGAsYHQ/s640/image3.gif)
 
 ​															Source: [Google AI Blog — Exploring transfer learning with T5](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html)
 
@@ -32,7 +32,7 @@ But the T5 model is learning to take in text input and text output for all tasks
 
 The large scale study of the different factors of variation begins with the **attention masking and foundational architecture** for these pre-trained, self-supervised objectives. So the difference between the autoregressive language modelling or sequentially predicting the next token, compared to masked language modelling used in papers like BERT. 
 
-![factors_of_variation](../assets/T5-transformer/factors_of_variation.png)
+![factors_of_variation](../assets/t5-transformer/factors_of_variation.png)
 
 They further take apart the de-noising **self supervised learning objective** by replacing the spans and different ways of doing that using hyper parameters of corruption rate when the tokens were replaced by the mask, and the span length which we will get into later. 
 
