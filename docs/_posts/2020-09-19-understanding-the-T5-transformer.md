@@ -238,9 +238,9 @@ They also introduced this “*Fill-in-the-Blank Text Generation”* tool (availa
 
 ## Resources
 
-1. ![Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/pdf/1910.10683.pdf)
-2. ![Google AI Blog Post](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html)
-3. ![The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/)
-4. ![BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
-5. ![XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/abs/1906.08237)
+1. [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/pdf/1910.10683.pdf)
+2. [Google AI Blog Post](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html)
+3. [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/)
+4. [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+5. [XLNet: Generalized Autoregressive Pretraining for Language Understanding](https://arxiv.org/abs/1906.08237)
 
