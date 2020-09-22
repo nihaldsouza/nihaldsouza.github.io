@@ -32,7 +32,7 @@ But the T5 model is learning to take in text input and text output for all tasks
 
 The large scale study of the different factors of variation begins with the **attention masking and foundational architecture** for these pre-trained, self-supervised objectives. So the difference between the autoregressive language modelling or sequentially predicting the next token, compared to masked language modelling used in papers like BERT. 
 
-![factors_of_variation](transformers/assets/T5 transformer/factors_of_variation.png)
+![factors_of_variation](https://github.com/nihaldsouza/nihaldsouza.github.io/blob/master/docs/assets/T5%20transformer/factors_of_variation.png)
 
 They further take apart the de-noising **self supervised learning objective** by replacing the spans and different ways of doing that using hyper parameters of corruption rate when the tokens were replaced by the mask, and the span length which we will get into later. 
 
