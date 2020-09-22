@@ -24,7 +24,7 @@ An interesting detail about this study is the text-to-text formulation of all NL
 
 ![text-to-text framework](https://1.bp.blogspot.com/-o4oiOExxq1s/Xk26XPC3haI/AAAAAAAAFU8/NBlvOWB84L0PTYy9TzZBaLf6fwPGJTR0QCLcBGAsYHQ/s640/image3.gif)
 
-<center>*Source: [Google AI Blog — Exploring transfer learning with T5](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html)</center>
+*Source: [Google AI Blog — Exploring transfer learning with T5](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html)
 
 But the T5 model is learning to take in text input and text output for all tasks. So in order to do translation, you see the model with the prefix “translate English to German” followed by what you want it to translate. Or the “cola sentence” for the glu/cola tasks of determining if the sentence is grammatically correct. This way of prefixing the task with natural language is really interesting way of thinking about the unified models that can do multi-task learning, pre-training on the same objective and then fine-tuned to many different tasks. 
 
