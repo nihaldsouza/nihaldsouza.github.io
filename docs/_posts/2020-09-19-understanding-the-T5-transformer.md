@@ -120,7 +120,7 @@ This is also seen in the following tables where the denoising objective performs
 
 ![perf2](https://github.com/nihaldsouza/nihaldsouza.github.io/blob/master/docs/assets/T5%20transformer/perf2.png)
 
-![perf 3](https://github.com/nihaldsouza/nihaldsouza.github.io/blob/master/docs/assets/T5%20transformer/perf 3.png)
+![perf 3](https://github.com/nihaldsouza/nihaldsouza.github.io/blob/master/docs/assets/T5%20transformer/perf%203.png)
 
 ## Datasets
 
@@ -220,7 +220,7 @@ There are other ways of ensembling like having a different architecture, differe
 
 The authors then then take all the findings from this study —  the self supervised learning objective, the C4 dataset — and then scaling up the model size to 3 billion and 11 billion parameters. 
 
-![scaling up](https://github.com/nihaldsouza/nihaldsouza.github.io/blob/master/docs/assets/T5%20transformer/scaling up.png)
+![scaling up](https://github.com/nihaldsouza/nihaldsouza.github.io/blob/master/docs/assets/T5%20transformer/scaling%20up.png)
 
 You notice these major gains in the Stanford Question-Answer dataset compared to the base model (T5-Base).
 
