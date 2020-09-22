@@ -54,13 +54,13 @@ The first table shows the advantage of pre-training compared to randomly initial
 
 Attention masking masking describes how much of the input the transformer is able to see when it’s producing the output.
 
-![attention_masking](https://github.com/nihaldsouza/nihaldsouza.github.io/blob/master/docs/assets/T5%20transformer/attention_masking.png)
+![attention_masking](/assets/t5-transformer/attention_masking.png)
 
 In the **fully-visible** setting, the transformer is able to see the entire input when its producing each token in the output. In the **Causal** setting, it sees token 1 as it is generating output 1 and the window slides over as it generates the sequence. **Causal with prefix** sees a portion of the initial sequence and then proceeds to behave like the Causal masking. 
 
 ## Corresponding Architectures
 
-![corresponding_architectures](https://github.com/nihaldsouza/nihaldsouza.github.io/blob/master/docs/assets/T5%20transformer/corresponding_architectures.png)
+![corresponding_architectures](/assets/t5-transformer/corresponding_architectures.png)
 
 The **Encoder-Decoder architecture** corresponds to the fully-visible masking, where the entire input is visible while generating the output sequence. 
 
