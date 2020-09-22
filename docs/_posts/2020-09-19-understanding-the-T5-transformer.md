@@ -4,8 +4,6 @@ title:  "Glossing over the T5: Text-to-Text Transfer Transformer"
 date:   2020-10-19 14:58:17 +0530
 categories: Transformers
 ---
-# Glossing over the T5: Text-to-Text Transfer Transformer
-
 In an attempt to explore and survey modern transfer learning techniques used in language understanding, researchers at Google AI introduced the T5 — Text-to-Text Transfer Transformer — which was proposed earlier this year in the paper “[Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)”. The T5 provides a unified framework that attempts to combine all language problems into a text-to-text format. Moreover, the authors have also open-sourced a new dataset called C4 — Colossal Clean Crawled Corpus — to facilitate their work.
 
 ## Preface
@@ -34,7 +32,7 @@ But the T5 model is learning to take in text input and text output for all tasks
 
 The large scale study of the different factors of variation begins with the **attention masking and foundational architecture** for these pre-trained, self-supervised objectives. So the difference between the autoregressive language modelling or sequentially predicting the next token, compared to masked language modelling used in papers like BERT. 
 
-![factors_of_variation](./assets/T5 transformer/factors_of_variation.png)
+![factors_of_variation](/assets/T5 transformer/factors_of_variation.png)
 
 They further take apart the de-noising **self supervised learning objective** by replacing the spans and different ways of doing that using hyper parameters of corruption rate when the tokens were replaced by the mask, and the span length which we will get into later. 
 
