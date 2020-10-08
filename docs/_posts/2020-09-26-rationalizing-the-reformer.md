@@ -94,8 +94,9 @@ To tackle this problem, we make use of the [reversible residual network (RevNet)
 
 In the above figure, if we replaced the functions F and G with the attention and feed-forward layers inside the RevNet block, we get:
 
-> *Y₁ = X₁ + Attention(X₂)
-> Y₂= X₂+ FeedForward(Y₁)*
+> *Y₁ = X₁ + Attention(X₂)*
+>
+> *Y₂ = X₂ + FeedForward(Y₁)*
 
 We are able to store the activation values only once instead of N times, as compared to the standard residuals and hence save a lot of memory essentially making this arrangement a **reversible transformer**. 
 
