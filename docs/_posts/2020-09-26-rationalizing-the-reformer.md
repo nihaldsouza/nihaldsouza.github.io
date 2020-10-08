@@ -45,7 +45,7 @@ The LSH algorithm helps approximate the nearest neighbours in a high dimension s
 
 In a transformer, we map the each of the tokens to a vector space where the vector representations for all the tokens in the vocabulary co-exist. The vector representation is such that during training, the model is aware when two or more words are similar because of how close their vectors are (and conversely how dissimilar the words are based on how far the vectors are spaced). 
 
-![angular lsh](/assests/reformer/angular_lsh.png)
+![angular lsh](/assets/reformer/angular_lsh.png)
 
 Now imagine 2 points(x and y) in the vector space that lie on a circle/sphere. This circle is equally divided into 4 zones, each with its own distinct code. We rotate this circle randomly thrice (this depends on the length of the hash, in this case hash length is 3). There are two cases (top and bottom row) illustrated in the figure above:
 
@@ -65,7 +65,7 @@ Therefore instead of calculating attention over all of the vectors in *Q* and *K
 
 To increase the probability that similar items do not fall in different buckets, we perform the steps 1 and 2 multiple times and this is called **multi-round LSH attention**.
 
-![lsh mechanism](/assests/reformer/lsh_mechanism.png)
+![lsh mechanism](/assets/reformer/lsh_mechanism.png)
 
 According to the paper, the above diagram illustrates the LSH mechanism in the Reformer.
 
@@ -86,7 +86,7 @@ To solve the second problem of large number of encoder and decoder layers, we in
 
 Each sub-layer (attention and feed-forward) of the transformer in both the encoder and decoder is wrapped in a residual layer. This layer is essentially a layer normalization and addition between the input and output of each of the sub-layers. They are also known as [Residual Networks (ResNets)](https://arxiv.org/pdf/1512.03385.pdf) and have proven to be very effective in dealing with the vanishing gradient problem in deep neural networks. The problem is we need to store the activation values of each layer in the memory to calculate the gradients during back-propagation. This is a major bottleneck in memory consumption as more the number of layers, more the memory is needed to store them.
 
-![resnet vs revnet](/assests/reformer/resnet_v_revnet.png)
+![resnet vs revnet](/assets/reformer/resnet_v_revnet.png)
 
 To tackle this problem, we make use of the [reversible residual network (RevNet)](https://papers.nips.cc/paper/6816-the-reversible-residual-network-backpropagation-without-storing-activations.pdf) which has a series of reversible blocks. In RevNet, each layer’s activations can be reconstructed exactly from the subsequent layer’s activations, which enables us to perform back propagation without storing the activations in memory. In the above figure, we can calculate the inputs x<sub>1</sub> and x<sub>2</sub> from the blocks output y<sub>1</sub> and y<sub>2</sub>.
 
@@ -126,7 +126,7 @@ On the left hand side, we observe the accuracy graphs between the shared and sep
 
 On the right hand side, we see that the reversible Transformer saves memory without sacrificing accuracy in both tasks. 
 
-![lsh attention on imagenet64](/assests/reformer/experiments_lsh_attention.png)
+![lsh attention on imagenet64](/assets/reformer/experiments_lsh_attention.png)
 
 When it comes to the LSH attention, which is an approximation of the full attention, its accuracy improves as the hash value increases. In fact the model performs comparably when trained for 100K steps.
 
