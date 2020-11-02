@@ -3,7 +3,7 @@ layout: post
 mathjax: true
 title:  "Exploring Methodologies in Fake News Detection: Prediction Model (Part 2)"
 date:   2020-10-25 18:22:17 +0530
-categories: Fake News Detection, Models
+categories: Fake News Detection
 ---
 
 > This is the second article in a multi-part series to explore and understand the research done in developing language models to help debunk false information available in the public domain. There are many aspects of this system and I have separated them into multiple parts, each highlighting a particular research work that inspired me. 
