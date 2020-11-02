@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Exploring Language Models in Fake News Detection: Datasets (Part 1)"
+title:  "Exploring Methodologies in Fake News Detection: Dataset Construction (Part 1)"
 date:   2020-10-05 14:58:17 +0530
-categories: Fake News
+categories: Fake News Detection, Datasets
 ---
 
 > This is the first article in a multi-part series to explore and understand the research done in developing language models to help debunk false information available in the public domain. There are many aspects of this system and I have separated them into multiple parts, each highlighting a particular research work that inspired me. 
