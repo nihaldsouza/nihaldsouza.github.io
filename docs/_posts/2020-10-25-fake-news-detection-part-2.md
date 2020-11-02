@@ -1,5 +1,6 @@
 ---
 layout: post
+mathjax: true
 title:  "Exploring Methodologies in Fake News Detection: Prediction Model (Part 2)"
 date:   2020-10-25 18:22:17 +0530
 categories: Fake News Detection, Models
