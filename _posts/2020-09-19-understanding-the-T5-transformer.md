@@ -2,7 +2,8 @@
 layout: post
 title:  "Glossing over the T5: Text-to-Text Transfer Transformer"
 date:   2020-09-19 14:58:17 +0530
-categories: Transformers
+categories: [Transformers]
+tags: t5 transformer
 ---
 In an attempt to explore and survey modern transfer learning techniques used in language understanding, researchers at Google AI introduced the T5 — Text-to-Text Transfer Transformer — which was proposed earlier this year in the paper “[Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)”. The T5 provides a unified framework that attempts to combine all language problems into a text-to-text format. Moreover, the authors have also open-sourced a new dataset called C4 — Colossal Clean Crawled Corpus — to facilitate their work.
 
