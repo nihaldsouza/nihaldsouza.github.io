@@ -2,7 +2,8 @@
 layout: post
 title:  "Rationalizing the Reformer: The Efficient Transformer"
 date:   2020-09-26 19:58:17 +0530
-categories: Reformer
+categories: [Transformers]
+tags: reformer transformer
 ---
 
 This article aims to explore an efficient transformer model from Google AI called the Reformer, which was proposed earlier this year in the paper [“Reformer: The Efficient Transformer”](https://openreview.net/pdf?id=rkgNKkHtvB). To overcome the efficiency related short-comings of the standard transformer, the reformer presents a way to approximate full attention and attention over long sequences. It also proposes ideas of reducing the memory requirements of training transformer models. This results in a model that is capable of handling a context window of upto a million words on a single GPU with 16GB of memory, and yet accuracy at par with the Transformer model.
