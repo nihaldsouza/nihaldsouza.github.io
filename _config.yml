@@ -28,11 +28,9 @@ github_username:  nihaldsouza
 
 # Build settings
 markdown: kramdown
-theme: minima
+remote_theme: poole/hyde
 plugins:
   - jekyll-feed
-  
-remote_theme: poole/hyde
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
