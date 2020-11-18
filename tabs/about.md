@@ -8,4 +8,6 @@ title: About
 # MIT License
 ---
 
-Hey there! Welcome to my little blog. My posts are usually interpretations of what I find interesting and intriguing in the world of ML and AI. Currently I am exploring the world of NLP and some of its latest and greatest advancements. I hope you enjoy reading them!
+Hey there! Welcome to my blog. My posts are usually interpretations of what I find interesting in the world of computational linguistics. Feel free to reach out to me over Twitter or Email, if required.  
+
+Here's my [resume](/assets/resume.pdf).
