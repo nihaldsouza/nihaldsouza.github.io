@@ -27,5 +27,5 @@ Here's my [resume](/assets/resume.pdf).
 ###  Check it out!
 Some of my personal bookmarks that you might enjoy
 
-- https://pudding.cool/2018/12/3d-cities-story/
+- [Population Mountains](https://pudding.cool/2018/12/3d-cities-story/)
 
