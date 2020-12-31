@@ -22,7 +22,7 @@ Here's my [resume](/assets/resume.pdf).
 
 ### What am I currently working on?
 
-- WikiContext Project: https://github.com/nihaldsouza/wikicontext-v2
+- [WikiContext Project](https://github.com/nihaldsouza/wikicontext-v2)
 
 ###  Check it out!
 Some of my personal bookmarks that you might enjoy
