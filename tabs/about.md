@@ -25,7 +25,7 @@ Here's my [resume](/assets/resume.pdf).
 - [WikiContext Project](https://github.com/nihaldsouza/wikicontext-v2)
 
 ###  Check it out!
-Some of my personal bookmarks that you might enjoy
+Some of my personal favourite bookmarks that you might enjoy
 
 - [Population Mountains](https://pudding.cool/2018/12/3d-cities-story/)
 - [Drowning in Plastic](https://graphics.reuters.com/ENVIRONMENT-PLASTIC/0100B275155/index.html)
