@@ -14,7 +14,7 @@ My name is Nihal D'Souza and I am currently a software engineer at Cisco Systems
 
 In my spare time, I usually work on projects or read data science related articles. Recently, I've started reading research papers and found myself thoroughly enjoying some of them! To make sure I understand them well, I've started taking down notes detailing my thought process. I've decided to publish a select few as posts on this blog in the hopes that others might find them equally intriguing. I've developed a liking in computational linguistics, mainly focused towards fake news detection in machine generated text. 
 
-In my spare time I love cycling, listening to music and going on long runs. I am also an ardent Formula One fan who idolizes Lewis Hamilton.
+In my spare time I love cycling, listening to music and going on long runs. I am also an ardent Formula One fan.
 
 Feel free to reach out to me over Twitter or Email, which can be found on the bottom left-hand side of the page. I'd love to collaborate on any project you're working on!
 
