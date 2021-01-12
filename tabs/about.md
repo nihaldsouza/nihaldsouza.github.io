@@ -16,9 +16,9 @@ In my spare time, I usually work on projects or read data science related articl
 
 In my spare time I love cycling, listening to music and going on long runs. I am also an ardent Formula One fan.
 
-Feel free to reach out to me over Twitter or Email, which can be found on the bottom left-hand side of the page. I'd love to collaborate on any project you're working on!
+Feel free to reach out to me over Twitter or Email, links to which can be found on the bottom left-hand side of the page. I'd love to collaborate on any project that you're working on!
 
-Here's my [resume](/assets/resume.pdf).
+Learn more about me: [resume](/assets/resume.pdf)
 
 ### What am I currently working on?
 
