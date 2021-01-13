@@ -30,4 +30,5 @@ Some of my personal favourite bookmarks that you might enjoy
 - [Population Mountains](https://pudding.cool/2018/12/3d-cities-story/)
 - [Drowning in Plastic](https://graphics.reuters.com/ENVIRONMENT-PLASTIC/0100B275155/index.html)
 - [The Historical Cost of Light](https://pudding.cool/2020/12/lighting-cost/)
+- [Judge My Spotify](https://pudding.cool/2020/12/judge-my-spotify/)
 
